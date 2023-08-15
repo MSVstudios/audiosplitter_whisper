@@ -124,6 +124,7 @@ def process_audio_files(input_folder, settings):
 
     for audio_file in os.listdir(input_folder):
         audio_file_path = os.path.join(input_folder, audio_file)
+        print ("working on file: " + audio_file_path)
         if not os.path.isfile(audio_file_path):
             continue
 
@@ -171,11 +172,14 @@ def merge_segments(output_dir):
 def select_input_folder():
     root = tk.Tk()
     root.withdraw()
-    return filedialog.askdirectory(title="Select input folder").replace("/","\\")
+    # return filedialog.askdirectory(title="Select input folder").replace("/","\\")
+    # change 20230815
+    return os.path.normpath( filedialog.askdirectory(title="Select input folder") )
 
 
 def main():
     input_folder = select_input_folder()
+    print("using input folder" + input_folder)
     settings = load_settings(CONFIG_PATH)
     process_audio_files(input_folder, settings)
     

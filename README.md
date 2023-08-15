@@ -34,24 +34,28 @@ git clone https://github.com/MSVstudios/audiosplitter_whisper.git
 cd audiosplitter_whisper
 ``` 
 
-pip
+5. install torch (latest for NVIDIA) https://pytorch.org/get-started/locally/
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
 
+6. install whisperX https://github.com/m-bain/whisperX
+```
+pip install git+https://github.com/m-bain/whisperx.git
+```
 
-6. If you ran into any permission issues, you'll need to change your windows Execution Policy to Remote Signed.  This does lower security on your system a small bit as it allows for scripts to be ran on your computer, however, only those signed by a Trusted Publisher or verified by you can be run (to my knowledge).  Do at your own risk.
-    - Open a powershell window as admin.  Then, run the following command:
+7. other requierement
+```
+pip install -r requirements.txt
+```
 
-    ```
-    Set-ExecutionPolicy RemoteSigned
-    ```
-
-    - If you want to change it back, you can with:
-    ```
-    Set-ExecutionPolicy Restricted
-    ```
-
-7. Now rerun step 5 and activate your venv.  After it's activated, you can then run the following command to start up the script:
+8. run audio splitter script
 ```
 python split_audio.py
 ```
 
-For more details, please refer to the youtube video.
+9. errors/warning
+you may gat these warning messages but usually they don't cause any problem
+Model was trained with pyannote.audio 0.0.1, yours is 2.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.0.1+cu118. Bad things might happen unless you revert torch to 1.x.
+ 
