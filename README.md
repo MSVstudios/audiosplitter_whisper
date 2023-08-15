@@ -14,26 +14,28 @@ https://youtu.be/9lsSSPnF67Q
 - Cuda Capable Nvidia GPU (highly recommended)
 
 ## Installation and basic usage
-1. Clone the repository (repo)
+1. create Anaconda env
 ```
-git clone https://github.com/JarodMica/audiosplitter_whisper.git
+conda create --name audiosplitter_whisper python=3.10
 ```
 
-2. Navigate into the repo with:
+2. activate Ancaond virtual env
+```
+conda activate audiosplitter_whisper 
+```
+
+3. Clone the repository (repo)
+```
+git clone https://github.com/MSVstudios/audiosplitter_whisper.git
+```
+
+4. Navigate into the repo with:
 ```
 cd audiosplitter_whisper
 ``` 
 
-4. Run setup-cuda.py if you have a compatible Nvidia graphics card or run setup-cpu.py if you do not. **NOTE:** This splitter will work on a CPU, albeit, very slowly.  The reason I keep this option is for people who may want to curate a dataset locally, but train on colab. (AMD not compatible, Mac is not coded for (should be able to use MPS though).  Both can use CPU option)
+pip
 
-```
-python setup-cuda.py
-```
-
-5. Activate the virtual envionrment (venv).
-```
-venv\Scripts\activate
-```
 
 6. If you ran into any permission issues, you'll need to change your windows Execution Policy to Remote Signed.  This does lower security on your system a small bit as it allows for scripts to be ran on your computer, however, only those signed by a Trusted Publisher or verified by you can be run (to my knowledge).  Do at your own risk.
     - Open a powershell window as admin.  Then, run the following command:
