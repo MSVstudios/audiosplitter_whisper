@@ -53,5 +53,3 @@ pip install -r requirements.txt
 ```
 python split_audio.py
 ```
-
-For more details, please refer to the youtube video.
