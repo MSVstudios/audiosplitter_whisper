@@ -54,8 +54,4 @@ pip install -r requirements.txt
 python split_audio.py
 ```
 
-9. errors/warning
-you may gat these warning messages but usually they don't cause any problem
-Model was trained with pyannote.audio 0.0.1, yours is 2.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
-Model was trained with torch 1.10.0+cu102, yours is 2.0.1+cu118. Bad things might happen unless you revert torch to 1.x.
- 
+For more details, please refer to the youtube video.
