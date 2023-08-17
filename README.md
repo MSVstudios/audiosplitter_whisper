@@ -34,7 +34,7 @@ git clone https://github.com/MSVstudios/audiosplitter_whisper.git
 cd audiosplitter_whisper
 ``` 
 
-5. install torch (latest for NVIDIA) https://pytorch.org/get-started/locally/
+5. install torch (latest for NVIDIA) https://pytorch.org/get-started/locally/ be careful you must use the Cuda toolkit version as you use in PyTorch: if you use Cuda toolkit 12.1 with PyTorch cuda11.8 you will crash often. In case you have the latest NVidia driver that automatically installs Cuda toolkit 12.1 you can install manual Cuda toolkit 11.8 
 ```
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
